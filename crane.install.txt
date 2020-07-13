@@ -1,0 +1,21 @@
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda install -c bioconda bowtie2
+conda install -c bioconda biom-format
+conda install -c bioconda metaphlan2
+pip install humann2
+conda install -c bioconda diamond=0.8.36
+conda install -c conda-forge glpk 
+humann2_test
+
+
+humann2_config --update database_folders nucleotide /work/unobioinformatics/pdhakal/reference/chocophlan/chocophlan
+humann2_config --update database_folders utility_mapping /work/unobioinformatics/pdhakal/reference/utility_mapping/
+humann2_config --update database_folders protein /work/unobioinformatics/pdhakal/reference/uniref/uniref
+
+
+
+cp -rf /home/unobioinformatics/pdhakal/miniconda_old/bin/metaphlan_databases /work/unobioinformatics/pdhakal/miniconda3/bin/
+
+submit slurm

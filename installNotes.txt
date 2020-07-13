@@ -1,0 +1,95 @@
+
+conda create -n microbiome
+conda activate microbiome
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda install -c bioconda bowtie2
+conda install -c bioconda biom-format
+conda install -c bioconda metaphlan2
+pip install humann2
+conda install -c bioconda diamond=0.8.36
+conda install -c conda-forge glpk 
+humann2_databases --download chocophlan full chocophlan
+5.37 GB 100.00 %   7.73 MB/sec  0 min -0 sec         
+Extracting: /home/pdhakal/chocophlan/full_chocophlan_plus_viral.v0.1.1.tar.gz
+
+Database installed: /home/pdhakal/chocophlan/chocophlan
+
+(microbiome) pdhakal@pdhakal-VirtualBox:~$ humann2_databases --download uniref uniref90_diamond uniref90
+Creating subdirectory to install database: /home/pdhakal/uniref90/uniref
+Download URL: http://huttenhower.sph.harvard.edu/humann2_data/uniprot/uniref_annotated/uniref90_annotated_1_1.tar.gz
+Downloading file of size: 5.87 GB
+
+5.87 GB 100.00 %  10.61 MB/sec  0 min -0 sec         
+Extracting: /home/pdhakal/uniref90/uniref90_annotated_1_1.tar.gz
+
+(microbiome) pdhakal@pdhakal-VirtualBox:~$ humann2_databases --download utility_mapping full utilitymap
+Creating directory to install database: /home/pdhakal/utilitymap
+Creating subdirectory to install database: /home/pdhakal/utilitymap/utility_mapping
+Download URL: http://huttenhower.sph.harvard.edu/humann2_data/full_mapping_1_1.tar.gz
+Downloading file of size: 0.58 GB
+
+0.58 GB 100.00 %  11.03 MB/sec  0 min -0 sec         
+Extracting: /home/pdhakal/utilitymap/full_mapping_1_1.tar.gz
+
+Database installed: /home/pdhakal/utilitymap/utility_mapping
+
+HUMAnN2 configuration file updated: database_folders : utility_mapping = /home/pdhakal/utilitymap/utility_mapping
+
+
+
+conda activate microbiome
+
+(microbiome) pdhakal@pdhakal-VirtualBox:~/humann2-2.8.1/examples$ humann2 --input demo.fastq --output demo_run
+
+(The diamond executable can not be found. Please check the install.)
+conda install -c bioconda bowtie2
+
+conda deactivate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+conda create -n 'strainphlan'
+conda activate strainphlan
+conda install python=2.7
+conda install biopython
+conda install msgpack-python
+conda install pandas
+conda install numpy
+conda install scipy
+conda install dendropy
+
+
+conda install -c bioconda muscle
+conda install -c bioconda bowtie2
+
+conda install -c bioconda samtools=0.1.19
+conda install -c bioconda bcftools
+conda install -c bioconda raxml
+conda install -c biocore blast-plus
+conda activate strainphlan
+
+
+
+
+
+
+
+
+ 
