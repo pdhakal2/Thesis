@@ -1,0 +1,1 @@
+/home/pdhakal/miniconda3/envs/microbiome/bin/metaphlan2.py /home/pdhakal/humann2/ERRXXXXX.fastq.gz -t rel_ab --index mpa_v20_m200 -o /home/pdhakal/humann2/ERRXXXXX_metaphlan_bugs_list.tsv --input_type multifastq --bowtie2out /home/pdhakal/humann2/ERRXXXXX_metaphlan_bowtie2.txt
