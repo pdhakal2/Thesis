@@ -1,0 +1,9 @@
+#!/bin/sh
+#SBATCH --time=10:00:00          # Run time in hh:mm:ss
+#SBATCH --mem-per-cpu=8192       # Maximum memory required per CPU (in megabytes)
+#SBATCH --job-name=humann2
+#SBATCH --error=/work/unobioinformatics/pdhakal/job.%J.err
+#SBATCH --output=/work/unobioinformatics/pdhakal/job.%J.out
+
+humann2 --input /lustre/work/unobioinformatics/pdhakal/data/ERR710415.fastq.gz --output /lustre/work/unobioinformatics/pdhakal/data/ERR710415
+
